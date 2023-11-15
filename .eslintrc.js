@@ -11,5 +11,8 @@ module.exports = {
     'prettier/prettier': ['warn', prettierOptions],
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
+
+    'no-console': 'warn',
+    'no-debugger': 'warn',
   },
 };
