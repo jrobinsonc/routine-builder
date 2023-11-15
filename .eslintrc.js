@@ -8,6 +8,8 @@ module.exports = {
   extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
 
   rules: {
-    'prettier/prettier': 'warn',
+    'prettier/prettier': ['warn', prettierOptions],
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
   },
 };
