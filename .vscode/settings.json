@@ -14,12 +14,12 @@
   "prettier.configPath": ".prettierrc.js",
   "prettier.ignorePath": ".gitignore",
   // Common settings
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.addMissingImports": true,
     "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript][typescript][typescriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
