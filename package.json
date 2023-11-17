@@ -2,6 +2,7 @@
   "name": "routine-builder",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Jose Robinson (https://joserobinson.com)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
