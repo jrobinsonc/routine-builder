@@ -55,6 +55,7 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
+        'plugin:jsdoc/recommended-typescript',
         'plugin:tailwindcss/recommended',
         'airbnb',
         'airbnb/hooks',
@@ -77,6 +78,7 @@ module.exports = {
 
         // These rules are configured as errors or disabled, but they are more
         // like warnings as they do not cause any major issues.
+        '@typescript-eslint/promise-function-async': 'warn',
         '@typescript-eslint/strict-boolean-expressions': 'warn',
         '@typescript-eslint/await-thenable': 'warn',
         '@typescript-eslint/no-floating-promises': [
