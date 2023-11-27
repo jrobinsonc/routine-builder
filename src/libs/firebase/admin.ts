@@ -1,20 +1,19 @@
+import { isPlainObject, raise } from '@/libs/helpers';
 import type { ServiceAccount } from 'firebase-admin';
 import admin from 'firebase-admin';
-import { isPlainObject, raise } from '@/libs/helpers';
-import type { Firestore } from 'firebase-admin/firestore';
 
 /**
- * @param value - Value to check.
+ * @param arg - Argument to check.
  * @returns True if value is a service account, false otherwise.
  */
-function isServiceAccount(value: unknown): value is ServiceAccount {
-  return isPlainObject(value) && typeof value.private_key_id === 'string';
+function isServiceAccount(arg: unknown): arg is ServiceAccount {
+  return isPlainObject(arg) && typeof arg.private_key_id === 'string';
 }
 
 /**
  * @returns The firebase admin service account.
  */
-function firebaseAdminFactory(): typeof admin {
+const firebaseAdmin = (): typeof admin => {
   if (!admin.apps.length) {
     try {
       const key: string =
@@ -35,7 +34,6 @@ function firebaseAdminFactory(): typeof admin {
   }
 
   return admin;
-}
+};
 
-export default firebaseAdminFactory;
-export type { Firestore };
+export default firebaseAdmin;
