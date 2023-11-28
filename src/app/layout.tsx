@@ -23,7 +23,7 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} px-4`}>{children}</body>
     </html>
   );
 }
