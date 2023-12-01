@@ -12,6 +12,11 @@
     "prepare": "husky install",
     "clean": "rimraf .next"
   },
+  "engines": {
+    "node": ">=v20.9.0",
+    "npm": ">=10.1.0",
+    "yarn": ">=1.22.19"
+  },
   "dependencies": {
     "firebase-admin": "^11.11.0",
     "next": "14.0.2",
