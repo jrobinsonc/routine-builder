@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+enum DaysList {
+  Mo
+  Tu
+  We
+  Th
+  Fr
+  Sa
+  Su
+}
+
+enum ScheduleType {
+  Weekday
+  Weekend
+  Everyday
+  Custom
+}
+
+model Routine {
+  id           Int          @id @default(autoincrement())
+  name         String       @unique
+  isArchived   Boolean?     @default(false)
+  hasReminder  Boolean?     @default(false)
+  startTime    String?
+  scheduleType ScheduleType
+  daysList     DaysList[]
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  deletedAt    DateTime?
+
+  @@index([isArchived])
+}
