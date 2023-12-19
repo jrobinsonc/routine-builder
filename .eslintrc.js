@@ -79,7 +79,7 @@ module.exports = {
         'import/no-extraneous-dependencies': [
           'error',
           {
-            devDependencies: ['prisma/seed.ts'],
+            devDependencies: ['prisma/seed.ts', '*.d.ts'],
           },
         ],
 
