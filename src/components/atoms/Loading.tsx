@@ -8,7 +8,7 @@ import type { ReactElement } from 'react';
 export function Loading(): ReactElement {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="h-32 w-32 animate-spin rounded-full border-y-2 border-white" />
+      <div className="h-20 w-20 animate-spin rounded-full border-y-2" />
     </div>
   );
 }
