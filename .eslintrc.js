@@ -5,6 +5,7 @@ const baseRules = {
 
   // These rules are configured as errors or disabled, but they are more
   // like warnings as they do not cause any major issues.
+  'max-classes-per-file': 'warn',
   'no-alert': 'warn',
   'no-console': 'warn',
   'no-continue': 'warn',
@@ -22,16 +23,12 @@ const baseRules = {
   'no-warning-comments': 'warn',
   'one-var': 'warn',
   'prefer-const': 'warn',
+  'prefer-destructuring': 'warn',
+  'prefer-template': 'warn',
   'require-await': 'warn',
   'vars-on-top': 'warn',
   eqeqeq: 'warn',
   semi: 'warn',
-  'no-magic-numbers': [
-    'warn',
-    {
-      ignore: [0, 1],
-    },
-  ],
 };
 
 module.exports = {
@@ -76,6 +73,18 @@ module.exports = {
         'no-shadow': 'off',
         'no-empty-function': 'off',
 
+        'react/require-default-props': 'off',
+
+        'import/prefer-default-export': 'off',
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            devDependencies: ['prisma/seed.ts'],
+          },
+        ],
+
+        'jsdoc/tag-lines': ['warn', 'any', { startLines: 1 }],
+
         // These rules are configured as errors or disabled, but they are more
         // like warnings as they do not cause any major issues.
         '@typescript-eslint/promise-function-async': 'warn',
@@ -86,6 +95,7 @@ module.exports = {
           { ignoreIIFE: true },
         ],
         '@typescript-eslint/no-for-in-array': 'warn',
+        '@typescript-eslint/lines-between-class-members': 'warn',
         '@typescript-eslint/no-implied-eval': 'warn',
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
