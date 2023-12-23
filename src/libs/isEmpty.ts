@@ -8,7 +8,7 @@
  * @param arg - The argument to check.
  * @returns `true` if the argument is empty, `false` otherwise.
  */
-export function isEmpty(arg: unknown): boolean {
+export default function isEmpty(arg: unknown): boolean {
   if (typeof arg === 'boolean') {
     return false;
   }

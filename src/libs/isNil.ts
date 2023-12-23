@@ -4,6 +4,6 @@
  * @param value - The value to check.
  * @returns Returns true if the value is null or undefined, else false.
  */
-export function isNil(value: unknown): value is null | undefined {
+export default function isNil(value: unknown): value is null | undefined {
   return value === null || value === undefined;
 }
