@@ -3,6 +3,7 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   // ESLint
   "eslint.enable": true,
+  "eslint.run": "onSave",
   "eslint.format.enable": true,
   "eslint.validate": ["javascript", "typescript", "typescriptreact"],
   "eslint.options": {
@@ -16,12 +17,16 @@
   // Common settings
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.removeUnusedImports": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript][typescript][typescriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   }
 }
