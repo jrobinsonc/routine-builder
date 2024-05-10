@@ -15,9 +15,8 @@
     "production:build": "prisma generate && prisma migrate deploy && next build"
   },
   "engines": {
-    "node": ">=20.9",
-    "npm": ">=10.1",
-    "yarn": ">=1.22"
+    "node": "^20.13",
+    "yarn": "^1.22"
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",
