@@ -31,6 +31,10 @@ const RoutineCustomSchedule = {
   Custom: RoutineSchedule.Custom,
 } as const;
 
+export type RoutineDaysType = typeof RoutineDays;
+export type RoutineDaysKeys = keyof RoutineDaysType;
+export type RoutineDaysValues = RoutineDaysType[RoutineDaysKeys];
+
 // eslint-disable-next-line @typescript-eslint/typedef
 const customScheduleSchema = z.object({
   scheduleType: z.nativeEnum(RoutineCustomSchedule),
@@ -80,7 +84,7 @@ export function createRoutine(
 export function getDaysLabels(
   scheduleType: RoutineModel['scheduleType'],
   daysList: RoutineModel['daysList'],
-) {
+): RoutineDaysValues[] {
   switch (scheduleType) {
     case 'Everyday':
       return [

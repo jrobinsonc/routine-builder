@@ -19,9 +19,9 @@ const baseRules = {
   'no-shadow': 'warn',
   'no-unreachable': 'warn',
   'no-unused-vars': 'warn',
+  'no-useless-catch': 'warn',
   'no-var': 'warn',
   'no-warning-comments': 'warn',
-  'one-var': 'warn',
   'prefer-const': 'warn',
   'prefer-destructuring': 'warn',
   'prefer-template': 'warn',
@@ -79,7 +79,12 @@ module.exports = {
         'import/no-extraneous-dependencies': [
           'error',
           {
-            devDependencies: ['prisma/seed.ts', '*.d.ts'],
+            devDependencies: [
+              '**/*.test.js',
+              '**/*.spec.js',
+              'prisma/seed.ts',
+              '*.d.ts',
+            ],
           },
         ],
 

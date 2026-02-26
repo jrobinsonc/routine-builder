@@ -2,28 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background-rgb: 59, 61, 73;
-  --text-rgb: 255, 255, 255;
-  --accent-1-background-rgb: 77, 79, 91;
-  --accent-1-text-rgb: 255, 255, 255;
-  --accent-1-muted-text-rgb: 138, 138, 141;
-}
-
 @layer base {
-  body {
-    background-color: rgb(var(--background-rgb));
-    color: rgb(var(--text-rgb));
+  h1 {
+    @apply my-4 text-2xl font-semibold;
   }
 }
 
 @layer utilities {
-  .accent-1 {
-    background-color: rgb(var(--accent-1-background-rgb));
-    color: rgb(var(--accent-1-text-rgb));
+  .bg-color-primary {
+    @apply bg-solitude dark:bg-peacoat;
   }
 
-  .accent-1 .muted-text {
-    color: rgb(var(--accent-1-muted-text-rgb));
+  .bg-color-accent {
+    @apply bg-white dark:bg-marengo;
+  }
+
+  .text-color-primary {
+    @apply text-peacoat dark:text-white;
   }
 }
